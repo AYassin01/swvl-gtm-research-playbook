@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "replace-with-date-author-scope",
+  "author": "replace-with-your-name",
+  "mode": "preview",
+  "as_of": "2026-11-13",
+  "target_accounts": 3,
+  "provenance": "Describe actual inputs and sources reused.",
+  "budgets": {
+    "clay_credits": 0,
+    "crustdata_credits": 0,
+    "treg_usd": 0,
+    "provider_calls": 0
+  },
+  "tool_calls": [],
+  "sources": [],
+  "accounts": [],
+  "segment_assessment": {
+    "status": "pending",
+    "purchase_readiness": "unconfirmed",
+    "notes": "Record the acceptance evidence and remaining qualification questions.",
+    "employer_transport_source_ids": [],
+    "workflow_source_ids": [],
+    "swvl_delivery_source_ids": []
+  },
+  "human_review": {
+    "status": "pending",
+    "reviewer": "",
+    "reviewed_on": null,
+    "dimensions": {},
+    "notes": "A different teammate supplies an actual evidence review."
+  }
+}
