@@ -1,0 +1,25 @@
+{
+  "schema_version": "session6-v1",
+  "owner": "Ahmed Yassin",
+  "scope_confirmed": false,
+  "team_hypothesis_confirmed": false,
+  "project": {"industry": "", "geography": "", "size_policy": "", "titles": [], "offer": ""},
+  "icp": "",
+  "markets": {
+    "tam": {"value": null, "kind": null, "provider": "Clay", "reference": "", "filters": "", "observed_at": ""},
+    "sam": {"value": null, "kind": null, "provider": "Clay", "reference": "", "filters": "", "observed_at": ""},
+    "som": {"value": null, "kind": null, "provider": "Clay", "reference": "", "filters": "", "observed_at": ""}
+  },
+  "nesting_reviewed": false,
+  "company_audit": [],
+  "table": {"url": "", "creation_path": "", "rows": null, "columns": [], "checked_at": "", "evidence": []},
+  "sample_domains": [],
+  "sampling_method": "",
+  "rule": {"threshold": 7, "definition": "", "adopted_at": ""},
+  "buyer_search": {"sample_frozen_at": "", "request_saved_at": "", "started_at": "", "reference": "", "request_file": "buyer-request.md"},
+  "people": [],
+  "decision": "",
+  "doubtful_check": {"profile_link": "", "sources": [], "finding": "", "owner_checked": false},
+  "links": {"task1_note": "task1-note.md", "session_copy": "codex-session-copy.md", "task2_note": "task2-note.md", "video": ""},
+  "access_checked": false
+}

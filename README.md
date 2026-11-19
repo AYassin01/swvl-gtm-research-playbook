@@ -1,78 +1,78 @@
-# Swvl GTM Research Playbook
+# Swvl GTM Research Lab
 
-A reproducible research workflow from GTMENA Cohort 01, Team 03 Pipeline. Start with a transport problem, qualify a segment, build an offer, and prioritize accounts using evidence and a controlled tool budget.
+Build a market map, a real Clay table, and a measured buyer-search experiment with Codex CLI. This is GTMENA Team 03 Pipeline's practical guide to Session 6, with a reproducible workflow teammates can adapt and demonstrate in their portfolios.
 
-**Module 2 / Session 6:** [Submission index](sessions/session-06/SUBMISSION.md) · [Restart instructions](sessions/session-06/README.md) · [Full Codex prompt](sessions/session-06/restart-codex.md) · [Ahmed's personal steps](sessions/session-06/manual-steps.md). The restart materials are ready; fresh coursework results and required external links remain pending. Use the submission index as the single review entry point once those deliverables are populated.
+**Start with [the setup guide](docs/01-setup.md), then follow [the execution steps](docs/02-execute.md).** Codex does the research, creates and populates the Clay table, checks the results, and prepares the evidence. You choose the hypothesis, approve the proposed spending, inspect the results, and record your Loom.
 
-**Our segment** is outsourced contact centers in Greater Cairo that already arrange employee rides for late shifts. **Our buyer** is the Facilities or Transport Manager who operates the service, with Finance or Procurement involved in commercial approval.
+**Research status:** guide and tooling available; no completed live run is claimed. [Submission index](SUBMISSION.md).
 
-The proposed offer pairs managed late-shift transport with records that Finance can match to billed runs. The purchase case still depends on the buyer's own records and Swvl's route economics.
+## What you will produce
 
-## Start here
+| Deliverable | What it contains |
+| --- | --- |
+| Clay workbook/table | At least 25 matching companies, with company name, website, and company-page link |
+| Market map | Three nested Clay searches: TAM, SAM, and a next-30-day SOM; actual counts with labels |
+| Buyer experiment | Five sampled companies, two requested people each, a rule adopted before the search, and an honest decision |
+| Tool and credit report | Each tool's job, actual calls, approval, known charges, unknown charges, and supporting evidence |
+| Class package | Four-line Task 1 note, three-line Task 2 note, Codex session copy, and three-minute Loom link |
 
-1. Read [why we chose the segment](docs/segment-decision.md).
-2. Run the saved case locally with Python 3.10 or newer. This uses zero provider credits.
+## Run it
 
-   ```bash
-   python scripts/evaluate.py data/baseline.json
-   python scripts/render_scorecard.py data/baseline.json
-   python -m unittest discover -s evals -v
-   ```
+Open Codex in this repository and paste:
 
-   On Windows, use `py -3` instead of `python` if needed. The renderer prints Markdown to the terminal. The saved version is in [case-study/account-scorecard.md](case-study/account-scorecard.md).
+```text
+Read AGENTS.md and prompts/codex.md and execute the guide.
+My Session 6 task PDF is at: [actual local path].
+Use the available browser connection to create and populate the Clay
+table when the Clay connector cannot write tables.
+Before spending, show me the supported quote and ask me to approve
+up to X Clay credits, with the separate action/search limits if applicable.
+Complete the work within that approval, record tool/cost evidence,
+and prepare the results branch for my Loom and final merge.
+```
 
-3. For fresh research, follow [how to run](docs/how-to-run.md), connect tools using [MCP setup](docs/mcp-setup.md), and paste [the complete Codex prompt](prompts/codex-run.md).
-4. Review evidence using [the evaluation protocol](docs/evaluations.md) before sharing a new release.
+The complete prompt is [prompts/codex.md](prompts/codex.md). The setup guide explains how to verify actual tool access and browser control before a paid operation. No provider price is hardcoded.
 
-## How the workflow fits together
+## Follow the guide
+
+1. [Connect Codex, Clay, and browser access](docs/01-setup.md).
+2. [Choose, approve, execute, and inspect](docs/02-execute.md).
+3. [Understand the research decisions](docs/03-method.md).
+4. [See exactly what each tool does and how credits are evidenced](docs/04-tools-and-credits.md).
+5. [Record the Loom using the guide and real work](docs/05-loom.md).
+6. [Check, submit, and merge the results](docs/06-results-and-merge.md).
+
+## Workflow
 
 ```mermaid
 flowchart TD
-    brief["Brief and scoring rubric"] --> scope["Define segment and evidence requirements"]
-    scope --> segment["TARGET SEGMENT · Greater Cairo outsourced contact centers with employer-arranged late-shift rides"]
-    segment --> cache{"Enough reusable evidence?"}
-    cache -->|Yes| verify["Open primary sources and review claims"]
-    cache -->|No| clay["Clay · Find company candidates"]
-    clay --> verify
-    verify --> gap{"What is missing?"}
-    gap -->|Buyer role| crust["Crustdata · Find current local owners"]
-    gap -->|Specific source| treg["treg · Retrieve a defined evidence gap"]
-    crust --> gate["Evaluate segment, evidence and budget"]
-    treg --> gate
-    gap -->|Nothing| gate
-    gate -->|Pass| output["ICP, offer, value ladder and account scores"]
-    gate -->|Fail| repair["Record gaps and repair affected claims"]
-    repair --> verify
-    output --> review["Human review and team pull request"]
+    setup["Scope, tools and browser access"] --> quote["Supported price quote and owner approval"]
+    quote --> map["Clay company searches and fit audit"]
+    map --> fit{"25 companies match the ICP?"}
+    fit -->|No| scope["Review the evidence and proposed scope"]
+    scope --> setup
+    fit -->|Yes| table["Codex creates and verifies the Clay table"]
+    table --> buyers["Frozen sample, owner request and buyer search"]
+    buyers --> evidence["Source check and tool-credit evidence"]
+    evidence --> complete{"Required artifacts complete?"}
+    complete -->|No| finish["Complete the actual missing work"]
+    finish --> complete
+    complete -->|Yes| loom["Record Loom and merge the results"]
 ```
 
-The [architecture and research map](docs/architecture.md) show the five work stages and the tool handoffs in more detail.
+## Local checks
 
-## What is included
+Python 3.10+ and the standard library are sufficient:
 
-| Area | What you get |
-| --- | --- |
-| [Case study](case-study/market-and-icp.md) | Market alternatives, ICP, buying committee, offer stack and value ladder |
-| [Saved dataset](data/baseline.json) | All 25 original account rows, five scores each, rationales, and 82 resolved source URLs |
-| [Tool routing](docs/tool-routing.md) | A specific job for Clay, Crustdata, treg, browsing, Drive and GitHub |
-| [Prompts](prompts/codex-run.md) | Replay, preview, full research, refresh and independent review |
-| [Evaluations](docs/evaluations.md) | Executable checks, adversarial test cases and a required human evidence review |
-| [Contribution guide](CONTRIBUTING.md) | Small PR workflow, review responsibilities and portfolio attribution |
+```text
+python scripts/audit.py repo
+python -m unittest discover -s tests -v
+python scripts/audit.py usage results/YOUR_RUN
+python scripts/audit.py ready results/YOUR_RUN
+```
 
-The [team roadmap](docs/roadmap.md) lists the next research and validation tasks. [Publishing instructions](docs/publishing.md) cover creating the GitHub repository and using the portable files.
+On Windows, use `py -3` if that is your Python launcher. These checks validate packaging, declared data, and cost accounting; sources and account access still require actual inspection. A failed buyer hypothesis can be a complete experiment. Missing required evidence or deliverables cannot.
 
-Everything in this repository is text. Mermaid stays editable inside Markdown. The Python tools use the standard library and run offline. Fresh provider research is agent-driven through connected tools.
+## Ownership
 
-## What the saved run proves
-
-The original 8 November 2026 snapshot contains 25 scored operators. Its routing is 4 priority discovery, 10 discovery queue, 6 verify first, 4 CRM review, and 1 excluded campaign. These are historical screening outcomes.
-
-The import preserves the original judgments and links. It has **pending human evidence review**. Passing the offline checks establishes structural consistency and reproducible routing. Current buyer roles, trigger dates, source availability and actual purchase intent need a fresh review.
-
-The earlier research reported Clay, Crustdata, treg, public-source verification and Google Drive use. Exact historical calls and credit totals were not retained. [Provenance](case-study/provenance.md) explains the limits. New runs must log actual tool use and costs.
-
-## Team ownership
-
-Ahmed Yassin initiated this workflow for Team 03 Pipeline. Each contributor can add evidence, improve prompts, challenge scores, test the evaluator, or develop the case. Use [CONTRIBUTORS.md](CONTRIBUTORS.md) to record your contribution and [the portfolio guide](docs/portfolio.md) to describe your own work accurately.
-
-Original repository material uses the [MIT license](LICENSE). External articles, provider data and GTMENA's original teaching templates keep their respective rights. Swvl has not approved the proposed commercial terms.
+Ahmed Yassin initiated this project for GTMENA Team 03 Pipeline. [Contribute a named run](CONTRIBUTING.md), keep the team's attribution, and describe your actual contribution in your portfolio. Original material is MIT-licensed; external sources, provider data, and course materials retain their respective rights. This is independent coursework, not an approved Swvl commercial offer.

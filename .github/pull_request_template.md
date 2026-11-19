@@ -1,25 +1,11 @@
-## Change
+## Result or workflow change
 
-Describe the problem, resulting behavior or evidence update, and affected account/claim IDs.
+Describe the company scope, hypothesis, real measurements and decision, or the specific guide/tool change.
 
-## Evidence and uncertainty
+## Tools and credits
 
-List source URLs, access dates, score changes and remaining buyer questions.
+Link the usage report and actual evidence. Distinguish reported charges, unknown charges and reserved caps. Explain any skipped tool or overrun.
 
-## Tool use and cost
+## Validation and handoff
 
-State actual providers called, purpose, reserved/actual amounts and cache reuse. Use zero when no provider calls ran.
-
-## Validation
-
-- [ ] `python scripts/check_repo.py`
-- [ ] `python scripts/evaluate.py data/baseline.json`
-- [ ] `python -m unittest discover -s evals -v`
-- [ ] New/changed run evaluated, or no run changed
-- [ ] Release gate and independent review recorded, or PR explicitly remains a draft
-- [ ] No private records, credentials, images or binaries
-- [ ] Contribution and changelog updated where relevant
-
-## Reviewer
-
-Name the teammate responsible for factual review. Keep author and reviewer distinct.
+List relevant checks. Link the actual workbook, notes, Codex copy and Loom for a completed result; mark missing artifacts plainly. Confirm only intended sanitized files are staged.
