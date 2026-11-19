@@ -45,12 +45,16 @@ Neither this company definition nor a new title family guarantees 25 firms or te
 ```mermaid
 flowchart TD
     setup["Owner choices and budget"] --> map["Clay: three nested company searches"]
-    map --> list["Company fit audit and SOM table"]
-    list --> sample["Freeze five companies and personal request"]
+    map --> fit{"25 companies fit the adopted ICP?"}
+    fit -->|No| revise["Report shortfall and review scope"]
+    revise --> setup
+    fit -->|Yes| sample["Freeze five companies and personal request"]
     sample --> people["Codex + Clay: two people per company"]
-    people --> check["Check one doubtful answer and apply rule"]
-    check --> package["Notes, actual usage, session copy and video"]
-    package --> submit["SUBMISSION.md links all five items"]
+    people --> check["Check an answer and apply the original rule"]
+    check --> ready{"Five deliverables complete?"}
+    ready -->|No| finish["Finish missing tool or personal steps"]
+    finish --> ready
+    ready -->|Yes| submit["SUBMISSION.md links all five items"]
 ```
 
 ## Checks and contributions
