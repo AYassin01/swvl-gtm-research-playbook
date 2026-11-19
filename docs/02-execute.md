@@ -2,7 +2,7 @@
 
 Use this page as your on-screen route through the project. The full prompt assigns execution to Codex; the owner column identifies the personal decisions and evidence you supply.
 
-| Step | Codex does | You do | What to retain/show |
+| Step | Codex does | I do | What to retain/show |
 | --- | --- | --- | --- |
 | 1. Define | Reads both task pages, writes five project parts and a falsifiable ICP | Agree the company scope and a distinct title family with your team | Adopted scope in config.md |
 | 2. Verify access | Inspects tools and demonstrates the table-creation path in the app | Enable browser control/log in if required | capabilities.md and actual workspace/table reference |
