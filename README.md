@@ -2,6 +2,8 @@
 
 A reproducible research workflow from GTMENA Cohort 01, Team 03 Pipeline. Start with a transport problem, qualify a segment, build an offer, and prioritize accounts using evidence and a controlled tool budget.
 
+**Module 2 / Session 6:** [Submission index](sessions/session-06/SUBMISSION.md) · [Restart instructions](sessions/session-06/README.md) · [Full Codex prompt](sessions/session-06/restart-codex.md) · [Ahmed's personal steps](sessions/session-06/manual-steps.md). The restart materials are ready; fresh coursework results and required external links remain pending. Use the submission index as the single review entry point once those deliverables are populated.
+
 **Our segment** is outsourced contact centers in Greater Cairo that already arrange employee rides for late shifts. **Our buyer** is the Facilities or Transport Manager who operates the service, with Finance or Procurement involved in commercial approval.
 
 The proposed offer pairs managed late-shift transport with records that Finance can match to billed runs. The purchase case still depends on the buyer's own records and Swvl's route economics.

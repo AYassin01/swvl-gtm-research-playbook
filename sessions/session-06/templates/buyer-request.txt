@@ -1,0 +1,15 @@
+Write your buyer-search request in your own words after the sample is frozen.
+
+Include all of the following:
+- The five actual company names and verified website domains.
+- The adopted title family, without silently adding other functions.
+- Two people per company, up to ten actual people across the fixed sample.
+- Current employment and relevant Egypt/Greater Cairo site remit.
+- Output fields: name, job title, company, professional profile link.
+- The exact instruction: do not guess.
+- No email addresses or phone numbers.
+- Missing results should remain missing; do not replace companies to raise yield.
+- Use the selected Clay workspace and existing authorized cap.
+
+Codex saves your exact request and its timestamp before making the buyer query.
+It then preserves the original returns and checks relevance separately.

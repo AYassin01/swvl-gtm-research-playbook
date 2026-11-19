@@ -2,6 +2,8 @@
 
 Read README.md, docs/tool-routing.md, docs/evidence-policy.md and docs/evaluations.md before research. Read prompts/codex-run.md for run configuration.
 
+Session 6 has a separate class workflow under `sessions/session-06/`. Read its AGENTS.md and restart-codex.md for that task. Its own company-fit and submission checks apply instead of the Module 1 scoring schema and release gates; preserve the general evidence, cost and privacy safeguards. Do not use historical baseline test results as Session 6 completion evidence.
+
 - Preserve the saved baseline. Write new work under a unique `runs/<date>-<author>-<scope>/` directory. Never silently overwrite another run.
 - Start in REPLAY mode. Provider budgets default to zero. Treat a positive budget supplied by the run owner as authorization within that cap.
 - Discover actual tool capabilities and authentication state. Never infer a connection from a plugin name or a previous chat. Map current tool names to the semantic jobs in docs/tool-routing.md.

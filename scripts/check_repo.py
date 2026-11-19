@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ALLOWED = {".md", ".txt", ".json", ".py", ".yml", ".yaml", ".gitignore", ""}
+ALLOWED = {".md", ".txt", ".json", ".csv", ".py", ".yml", ".yaml", ".gitignore", ""}
 SKIP = {".git", "__pycache__"}
 
 

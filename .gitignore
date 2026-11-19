@@ -9,6 +9,8 @@ secrets*
 private/
 runs/*/private/
 runs/*/raw/
+sessions/session-06/runs/*/private/
+sessions/session-06/runs/*/raw/
 *.png
 *.jpg
 *.jpeg
