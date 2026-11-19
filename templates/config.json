@@ -1,0 +1,18 @@
+{
+  "template_only": true,
+  "owner": "Ahmed Yassin",
+  "pdf_path": null,
+  "workspace": null,
+  "company_icp_proposal": "Outsourced contact-center operators with a verified Greater Cairo operating site",
+  "size_policy": "All sizes; no numeric headcount filter",
+  "transport_is_hard_filter": false,
+  "proposed_titles": ["Transport Manager", "Transportation Manager", "Transportation Supervisor", "Head of Transportation"],
+  "team_agreed": false,
+  "proposed_min_verified_buyers": 7,
+  "owner_adopted_rule": false,
+  "clay_credit_cap": null,
+  "credit_approval": "Ask the owner to approve a supported numeric quote before metered work",
+  "optional_provider_caps": 0,
+  "table_creation": "Use a genuine write-capable tool, otherwise permitted browser automation",
+  "publish": "Working result branch/PR, then merge after real video/access checks and CI"
+}
